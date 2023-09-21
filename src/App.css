@@ -1,3 +1,38 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,500,700');
+
+/* Style for paragraphs */
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Style for headings */
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* Style for strong text */
+strong {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+
 .App {
   text-align: center;
 }
@@ -28,6 +63,12 @@
   color: #61dafb;
 }
 
+.wrapper {
+  align-items: center;
+  padding-left: 32%;
+  padding-right: 32%;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +77,4 @@
     transform: rotate(360deg);
   }
 }
+
