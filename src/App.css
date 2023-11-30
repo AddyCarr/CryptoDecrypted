@@ -1,6 +1,12 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,500,700|Playfair+Display:ital:400,500,700');
 
+html, body, .App-header  {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 /* Style for paragraphs */
 p {
     font-family: 'Source Sans Pro', sans-serif;
@@ -40,8 +46,8 @@ h3 {
   font-family: 'Playfair Display', sans-serif;
   font-size: 26px;
   font-weight: bold;
-  margin-top: 25px;
-  margin-bottom: 10px;
+  margin-top: 45px;
+  margin-bottom: 15px;
   text-align: left;
 }
 
@@ -52,26 +58,51 @@ h4 {
   margin-top: 20px;
   margin-bottom: 15px;
   font-style: italic;
+}
+
+h5 {
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  text-align: left;
   
 }
 
 /* Style for strong text */
 strong {
     font-weight: bold;
-    color: #ff0000;
+    color: #000000;
 }
 
 hr {
   color: black;
 }
+
+li {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight:500;
+  text-align: left;
+}
 .App {
   text-align: center;
-  
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.background {
+    background: #e9e2ac;  /* fallback for old browsers */
+    min-height: 100%;
+    background-size: cover, cover;
+    background: -webkit-linear-gradient(to right, #d1edd7, #f1ebc0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: radial-gradient(transparent 48%, rgba(0, 0, 0, 0.342) 150%), linear-gradient(90deg, #d1edd7 0%, #f1ebc0 100%);
+    background-repeat: no-repeat;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -81,9 +112,13 @@ hr {
 }
 
 .App-header {
-  background: #e9e2ac;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #d1edd7, #f1ebc0);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #d1edd7, #f1ebc0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* background: #e9e2ac;  
+  background-size: cover, cover;
+  background: -webkit-linear-gradient(to right, #d1edd7, #f1ebc0);  /* Chrome 10-25, Safari 5.1-6 
+  background: radial-gradient(transparent 48%, rgba(0, 0, 0, 0.655) 100%), linear-gradient(90deg, #d1edd7 0%, #f1ebc0 100%); */
+  min-height: 100%;
+  background-repeat: no-repeat;
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -100,13 +135,16 @@ hr {
 .wrapper {
   align-items: center;
   padding: 32% 32%;
+  scroll-snap-type: y mandatory;
+  height: 100%;
   
 }
 
-@media all and (min-width:0px) and (max-width: 800px) {
+@media all and (min-width:0px) and (max-width: 1000px) {
   .wrapper {
     align-items: center;
     padding: 15% 15%;
+    scroll-snap-type: x mandatory;
 }
 
 }
@@ -131,13 +169,13 @@ hr {
   position: fixed;
   display: inline-flex;
   align-content: center;
-  justify-content: center;
+  justify-content: center; 
   width: 60%;            /* Full width */
   border-radius: 20px;     /* 4px border radius */
   z-index: 999;           /* Ensure it's above other content */
   padding: 5px 40px 5px 40px;
   margin-top: 30px;
-  background-color: rgba(255, 255, 255, .25);
+  background-color: rgba(255, 255, 255, 0.542);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, .25);
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, .25);
@@ -167,4 +205,18 @@ hr {
 .center-title {
   align-items: center;
   justify-content: center;
+}
+
+.fullscreen {
+  min-height: 80vh;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+ margin: 50px 0 50px 0;
+}
+
+.article {
+  scroll-snap-align: start;
 }
